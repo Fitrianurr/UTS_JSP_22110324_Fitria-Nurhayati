@@ -3,50 +3,46 @@
     Created on : 16 May 2025, 13.27.51
     Author     : F.Nurhayati
 --%>
-
 <%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>UTS|Fitria</title>
+    <title>UTS | Fitria</title>
     <link rel="stylesheet" href="Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
+    <h1>Bioskop FiChan</h1>
     <h1>Daftar Film</h1>
-    <%
-        ArrayList<String[]> films = new ArrayList<>();
-        films.add(new String[]{"pengepungan di Bukit Duri", "Thriller", "120", "45000", "12:00, 15:00"});
-        films.add(new String[]{"Jumbo", "Animasi", "90", "35000", "13:00, 16:00"});
-        films.add(new String[]{"Pengabdi Setan", "Horror", "120", "30000", "14:00, 17:00"});
-        films.add(new String[]{"The Raid", "Action", "120", "45000", "19:00, 20:00"});
-        films.add(new String[]{"Tarot", "Horror", "90", "35000", "18:00, 21:00"});
-        
-    %>
-    <table class="table">
-        <tr>
-            <th>Judul</th>
-            <th>Genre</th>
-            <th>Durasi (menit)</th>
-            <th>Harga Tiket</th>
-            <th>Jam Tayang</th>
-        </tr>
+    <div class="film-grid">
         <%
+            ArrayList<String[]> films = new ArrayList<>();
+            // judul, genre, durasi, harga, jam, poster
+            films.add(new String[]{"pengepungan di Bukit Duri", "Thriller", "120", "45000", "12:00, 15:00", "Poster/PBD.jpg"});
+            films.add(new String[]{"Jumbo", "Animasi", "90", "35000", "13:00, 16:00", "Poster/Jumbo.jpg"});
+            films.add(new String[]{"Pengabdi Setan", "Horror", "120", "30000", "14:00, 17:00", "Poster/PS.jpg"});
+            films.add(new String[]{"The Raid", "Action", "120", "45000", "19:00, 20:00", "Poster/TR.jpg"});
+
             for (String[] film : films) {
-                out.println("<tr>");
-                out.println("<td>" + film[0] + "</td>");
-                out.println("<td>" + film[1] + "</td>");
-                out.println("<td>" + film[2] + "</td>");
-                out.println("<td>" + film[3] + "</td>");
-                out.println("<td>" + film[4] + "</td>");
-                out.println("</tr>");
+        %>
+        <div class="film-card">
+            <img src="<%= film[5] %>" alt="Poster <%= film[0] %>">
+            <div class="film-info">
+                <h2><%= film[0] %></h2>
+                <p><strong>Genre:</strong> <%= film[1] %></p>
+                <p><strong>Durasi:</strong> <%= film[2] %> menit</p>
+                <p><strong>Harga:</strong> Rp <%= film[3] %></p>
+                <p><strong>Jam:</strong> <%= film[4] %></p>
+            </div>
+        </div>
+        <%
             }
         %>
-    </table>
-    <a href="formPesan.jsp" class="btn btn-primary">Pesan Tiket</a>
+    </div>
+    <a href="formPesan.jsp" class="btn">Pesan Tiket</a>
 </div>
 </body>
 </html>

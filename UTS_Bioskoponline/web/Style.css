@@ -6,21 +6,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : 16 May 2025, 14.17.08
     Author     : F.Nurhayati
 */
+/* style.css */
+
 body {
-    font-family: "Josefin Sans", sans-serif;
-    background: linear-gradient(135deg, #EC96A4  0%, #9A9EAB 100%);
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(to bottom right, #b784a7, #f8a6af);
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 90%;
-    max-width: 900px;
-    margin: 30px auto;
-    background-color: #EC96A4;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #f79baf;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 h1 {
@@ -29,47 +30,64 @@ h1 {
     margin-bottom: 30px;
 }
 
-.table {
+.film-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.film-card {
+    background-color: #ffbfd2;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.film-card:hover {
+    transform: scale(1.05);
+}
+
+.film-card img {
     width: 100%;
-    border-collapse: collapse;
+    height: 300px;
+    object-fit: cover;
 }
 
-.table th,
-.table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
+.film-info {
+    padding: 15px;
 }
 
-.table th {
-    background-color: #9A9EAB;
-    color: white;
+.film-info h2 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #000;
 }
 
-.table tr:nth-child(even) {
-    background-color: #CC7A8B;
-}
-
-.table tr:hover {
-    background-color: #f1f1f1;
+.film-info p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #333;
 }
 
 .btn {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #9A9EAB;
+    display: block;
+    width: fit-content;
+    background-color: #b784a7;
     color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
-    transition: background-color 0.3s;
+    padding: 10px 25px;
+    margin: 30px auto 0;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.2s;
 }
 
 .btn:hover {
     background-color: #660066;
 }
-
 form {
     display: flex;
     flex-direction: column;
@@ -93,7 +111,7 @@ select {
 
 input[type="submit"],
 button {
-    background-color: #9A9EAB;
+    background-color: #b784a7;
     color: white;
     padding: 12px 20px;
     border: none;
