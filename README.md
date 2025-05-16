@@ -13,17 +13,20 @@ Screenshot Hasil Output
 
 Halaman Daftar Film (index.jsp) 
 Menampilkan tabel film, genre, durasi, harga, dan jam tayang  
-![index](https://github.com/user-attachments/assets/2631a8fe-faae-47d6-ae3a-248124fc261c)
+![Index](https://github.com/user-attachments/assets/48a05f0d-c736-45c5-bfd7-59ab6dcc33da)
+
 
 
 Halaman Form Pemesanan (formPesan.jsp) 
 Form input nama, jumlah tiket, pilihan film dan jam tayang  
-![form](https://github.com/user-attachments/assets/3b8e4824-5f74-446b-888f-c903d39120c6)
+![FormPemesanan](https://github.com/user-attachments/assets/50dfc5f5-d9cc-4dec-88ca-b6b693d97e5d)
+
 
 
 Halaman Struk Transaksi (struk.jsp)
 Menampilkan data transaksi hasil input user  
-![struk](https://github.com/user-attachments/assets/2b31b43c-d783-416a-a3a7-b1f42849c59b)
+![StrukPesanan](https://github.com/user-attachments/assets/b2fe41bc-93c3-44b7-baf3-93b3bfcf37c6)
+
 
 
 Cara Menjalankan Aplikasi
